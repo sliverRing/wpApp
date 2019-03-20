@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Headers:x-requested-with,content-type'); 
+header('Access-Control-Allow-Headers:*'); 
 //引入WP加载文件，引入之后就可以使用WP的所有函数 
 require( '../../../../wp-load.php' );
 
