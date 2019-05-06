@@ -1,5 +1,7 @@
 <?php
-header('Access-Control-Allow-Headers:*'); 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
+header('Access-Control-Allow-Headers:x-requested-with,content-type');
 //引入WP加载文件，引入之后就可以使用WP的所有函数 
 require( '../../../../wp-load.php' );
 

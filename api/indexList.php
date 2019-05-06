@@ -1,8 +1,10 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
+header('Access-Control-Allow-Headers:x-requested-with,content-type');
 // 接口名：首页文章列表
 // 教程地址：https://www.inacorner.top/395.html
 // 可传参数：page(页数)
-header('Access-Control-Allow-Headers:*'); 
 //引入WP加载文件，引入之后就可以使用WP的所有函数 
 require( '../../../../wp-load.php' );
 

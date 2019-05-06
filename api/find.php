@@ -1,4 +1,7 @@
-<?php 
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
+header('Access-Control-Allow-Headers:x-requested-with,content-type'); 
 // 接口名：发现页面
 // 接口功能：获取六个分类，获取几篇最新文章，获取六个标签
 // 教程地址：https://www.inacorner.top/455.html
