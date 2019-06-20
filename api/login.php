@@ -1,6 +1,7 @@
 <?php
 //引入WP加载文件，引入之后就可以使用WP的所有函数 
 require( '../../../../wp-load.php' );
+//允许跨域
 header('Access-Control-Allow-Origin:*'); 
 header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE'); 
 header('Access-Control-Allow-Credentials: true'); 
