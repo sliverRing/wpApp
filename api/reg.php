@@ -25,6 +25,7 @@ if($user_name=''&&$user_pwd==''&&$user_email=''){
 			$data['code'] = 404;
 			$data['msg'] = '当前邮箱已经存在！';
 		}else if(is_email($user_email)){
+			//定义用户数据
 			$userdata = array(
 				'user_pass'=>$user_pwd,
 				'user_login'=>$user_name,
@@ -32,6 +33,7 @@ if($user_name=''&&$user_pwd==''&&$user_email=''){
 				'user_email'=>$user_email,
 				'display_name'=>$user_name,
 			);
+			//使用wp函数插入用户
 			$user_id =(int)wp_insert_user($userdata);
 			if($user_id >0){
 				$data['code'] = 200;

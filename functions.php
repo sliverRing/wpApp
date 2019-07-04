@@ -9,7 +9,7 @@ if (!isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/admin/sample/s
 	require_once( dirname( __FILE__ ) . '/admin/sample/sample-config.php' );
 }
 
-//允许中文名
+//允许中文名注册
 function allowed_chinese_name ($username, $raw_username, $strict) {
 	$username = wp_strip_all_tags( $raw_username );
 	$username = remove_accents( $username );
