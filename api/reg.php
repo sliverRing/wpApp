@@ -20,31 +20,33 @@ if($user_name=''&&$user_pwd==''&&$user_email=''){
 		$data['code'] = 404;
 		$data['msg'] = '当前用户名已经存在！';
 	}else {
-		// 判断邮箱是否合法
+		// 判断邮箱是否存在
 		if(email_exists($user_email)){
 			$data['code'] = 404;
 			$data['msg'] = '当前邮箱已经存在！';
-		}else if(is_email($user_email)){
-			//定义用户数据
-			$userdata = array(
-				'user_pass'=>$user_pwd,
-				'user_login'=>$user_name,
-				'user_nicename'=>$user_name,
-				'user_email'=>$user_email,
-				'display_name'=>$user_name,
-			);
-			//使用wp函数插入用户
-			$user_id =(int)wp_insert_user($userdata);
-			if($user_id >0){
-				$data['code'] = 200;
-				$data['msg'] = '注册成功！';
+		}else {
+			if(is_email($user_email)){
+			    //定义用户数据
+				$userdata = array(
+					'user_pass'=>$user_pwd,
+					'user_login'=>$user_name,
+					'user_nicename'=>$user_name,
+					'user_email'=>$user_email,
+					'display_name'=>$user_name,
+				);
+			    //使用wp函数插入用户
+				$user_id =(int)wp_insert_user($userdata);
+				if($user_id >0){
+					$data['code'] = 200;
+					$data['msg'] = '注册成功！';
+				}else{
+					$data['code'] = 404;
+					$data['msg'] = '注册失败，服务器错误！';
+				}
 			}else{
 				$data['code'] = 404;
-				$data['msg'] = '注册失败，服务器错误！';
+				$data['msg'] = '邮箱地址格式错误！';
 			}
-		}else{
-			$data['code'] = 404;
-			$data['msg'] = '邮箱地址格式错误！';
 		}
 	}
 }
