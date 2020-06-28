@@ -35,11 +35,9 @@ if (have_posts()){ //如果查询出来了文章
 		// 获取文章id
 		$post_id=get_the_ID();
 		// 定义单条文章所需要的数据
-		$list=[
-			"id"=>$post_id,  //文章id
-			"title"=>get_the_title(), //文章标题
-			"img"=>get_the_post_thumbnail_url() //文章缩略图
-		];
+		$list['id']     = $post_id;//文章id
+		$list['title']  = get_the_title();//文章标题
+		$list['img']    = get_the_post_thumbnail_url();//文章缩略图
 		// 将每一条数据分别添加进$posts
 		array_push($posts,$list);
 	endwhile;
