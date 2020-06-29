@@ -29,3 +29,5 @@ function jinsom_update_user_login($user_id,$user_login){
 	return 1;
 	return 0;
 }
+// 引入composer包
+require_once 'vendor/autoload.php';
