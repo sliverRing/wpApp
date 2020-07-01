@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit773aab472f708e2c598bad53faa64230
 {
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'SliverApi\\' => 10,
+        ),
         'L' => 
         array (
             'Lcobucci\\JWT\\' => 13,
@@ -14,6 +18,10 @@ class ComposerStaticInit773aab472f708e2c598bad53faa64230
     );
 
     public static $prefixDirsPsr4 = array (
+        'SliverApi\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/sliver',
+        ),
         'Lcobucci\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/lcobucci/jwt/src',

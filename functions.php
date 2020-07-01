@@ -31,3 +31,4 @@ function jinsom_update_user_login($user_id,$user_login){
 }
 // 引入composer包
 require_once 'vendor/autoload.php';
+use Lcobucci\JWT\Builder;

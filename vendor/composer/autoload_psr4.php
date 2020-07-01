@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'SliverApi\\' => array($baseDir . '/sliver'),
     'Lcobucci\\JWT\\' => array($vendorDir . '/lcobucci/jwt/src'),
 );
