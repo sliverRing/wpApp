@@ -63,7 +63,7 @@ class Token{
 
 		$data->setId($pwd);
 		$if_auth      =  $token->validate($data);
-		
+
 		if(!$if_auth){
 			$_data['code'] = 500;
 			$_data['msg']  = '登录失效，请重新登录';
@@ -74,6 +74,5 @@ class Token{
 		$_data['code']      = 200;
 		$_data['user_data'] = get_userdata($uid);
 		return $_data;
-
 	}
 }
