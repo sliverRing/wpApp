@@ -6,6 +6,7 @@ header('Access-Control-Allow-Origin:*');
 header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE'); 
 header('Access-Control-Allow-Credentials: true'); 
 header('Access-Control-Allow-Headers: Content-Type,Content-Length,Accept-Encoding,X-Requested-with, Origin');
+
 //引入生成Token工具类 https://www.clearnull.com/951.html
 use SliverApi\Token;
 
